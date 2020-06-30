@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>935.2,2492</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>935.2,2911.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoginBank_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -60,7 +60,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoginBank" sap:VirtualizedContainerService.HintSize="525.6,2327.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LoginBank" sap:VirtualizedContainerService.HintSize="550.4,3018.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="username" />
       <Variable x:TypeArguments="ss:SecureString" Name="password" />
@@ -70,8 +70,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - LoginBank 들어온 것 확인" sap:VirtualizedContainerService.HintSize="484,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;LoginBank in&quot;]" />
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Credential을 통하여 공인인증서의 패르스워드를 가져온다." DisplayName="Invoke GetAppCredentials workflow" sap:VirtualizedContainerService.HintSize="484,132" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\GetAppCredentials.xaml">
+    <ui:LogMessage DisplayName="Log Message - LoginBank 들어온 것 확인" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;LoginBank in&quot;]" />
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Credential을 통하여 공인인증서의 패르스워드를 가져온다." DisplayName="Invoke GetAppCredentials workflow" sap:VirtualizedContainerService.HintSize="508.8,132" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\GetAppCredentials.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="out_Username">[username]</OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Credential">[BankCredential]</InArgument>
@@ -83,13 +83,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="은행 브라우저 열기." DisplayName="Open Browser - 은행 브라우저 열기" sap:VirtualizedContainerService.HintSize="484,1929.6" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[BankURL]">
+    <ui:OpenBrowser BrowserType="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="은행 브라우저 열기." DisplayName="Open Browser - 은행 브라우저 열기" sap:VirtualizedContainerService.HintSize="508.8,2620.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[BankURL]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="375.2,1796" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="475.2,2487.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="findLoginButton" />
               <Variable x:TypeArguments="ui:UiElement" Name="findCheck" />
@@ -99,8 +99,24 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - 브라우저 확인하기" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe  - 신한은행 메인홈페이지" sap:VirtualizedContainerService.HintSize="433.6,232" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="c0e36a3e15d4cfd20d68edaf7769453a" Selector="&lt;html title='신한은행' /&gt;">
+              <ui:BrowserScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,84.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </ActivityAction>
+              </ui:BrowserScope.Body>
+            </ui:BrowserScope>
+            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - 브라우저 확인하기" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
               <ui:WaitUiElementAppear.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="70f40ce9-f039-4a90-b797-8f12eb3f4e16" InformativeScreenshot="6b3211fae3e48ad676b319db3f909c10" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='신한은행 - Internet Explorer' /&gt;&lt;wnd aaname='신한은행' cls='Internet Explorer_Server' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -112,7 +128,7 @@
                 </ui:Target>
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - 로그인" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - 로그인" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -134,19 +150,23 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - 로그인 화면 확인하기" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
-              <ui:WaitUiElementAppear.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f54f9f4c-c6e6-4127-b22d-c239f348c7be" InformativeScreenshot="5721a70b1de20b2f1e905c1e21d8072d" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='로그인 | 신한은행 개인뱅킹 - Internet Explorer' /&gt;&lt;uia name='로그인 | 신한은행 개인뱅킹' role='창' /&gt;">
-                  <ui:Target.TimeoutMS>
-                    <InArgument x:TypeArguments="x:Int32" />
-                  </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
-                </ui:Target>
-              </ui:WaitUiElementAppear.Target>
-            </ui:WaitUiElementAppear>
-            <ui:WaitImageAppear FoundElement="{x:Null}" sap2010:Annotation.AnnotationText="아래의 Find Element의 경우 화면이 전체적으로 ㄸ뜨기도 전에 해당 Elemnet를 찾아서 클릭으로 이어진다. image가 완벽하게 뜰 때까지 기다렸다가 클릭이 이뤄지도록 한다." DisplayName="Find Image -해당 이미지 찾기" sap:VirtualizedContainerService.HintSize="333.6,183.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser  - 로그인 화면 확인하기" sap:VirtualizedContainerService.HintSize="433.6,232" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="f92b0c4682fb08d78f27a9b0f28283d2" Selector="&lt;html title='로그인 | 신한은행 개인뱅킹' /&gt;">
+              <ui:BrowserScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,84.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </ActivityAction>
+              </ui:BrowserScope.Body>
+            </ui:BrowserScope>
+            <ui:WaitImageAppear FoundElement="{x:Null}" sap2010:Annotation.AnnotationText="아래의 Find Element의 경우 화면이 전체적으로 ㄸ뜨기도 전에 해당 Elemnet를 찾아서 클릭으로 이어진다. image가 완벽하게 뜰 때까지 기다렸다가 클릭이 이뤄지도록 한다." DisplayName="Find Image -해당 이미지 찾기" sap:VirtualizedContainerService.HintSize="433.6,183.2" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
               <ui:WaitImageAppear.Image>
                 <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
               </ui:WaitImageAppear.Image>
@@ -166,9 +186,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:WaitImageAppear>
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - 공인인증서 로그인 버튼 확인" FoundElement="[findLoginButton]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - 공인인증서 로그인 버튼 확인" FoundElement="[findLoginButton]" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
               <ui:WaitUiElementAppear.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7b78cc0b-b62b-48d9-bea0-1e59248fe3a2" InformativeScreenshot="e6ecfd1387cc27b30a59230e18e5918d" Selector="&lt;html title='로그인 | 신한은행 개인뱅킹' /&gt;&#xD;&#xA;&lt;webctrl id='wq_uuid_1182' tag='A' /&gt;&#xD;&#xA;&lt;nav up='4' /&gt;&#xD;&#xA;&lt;webctrl id='btn_certLogin' tag='A' /&gt;&#xD;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7b78cc0b-b62b-48d9-bea0-1e59248fe3a2" InformativeScreenshot="e6ecfd1387cc27b30a59230e18e5918d" Selector="&lt;html title='로그인 | 신한은행 개인뱅킹' /&gt;&#xA;&lt;webctrl id='wq_uuid_1182' tag='A' /&gt;&#xA;&lt;nav up='4' /&gt;&#xA;&lt;webctrl id='btn_certLogin' tag='A' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -178,7 +198,7 @@
                 </ui:Target>
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - 로그인 버튼 클릭" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - 로그인 버튼 클릭" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -200,7 +220,41 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - password창 찾기" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
+            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - 하드디스크 확인" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6">
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0be0814f-8d08-45b0-b0eb-6c848490e560" InformativeScreenshot="62c5e6ee9546ecded0a2f6dbc30cdb67" Selector="&lt;webctrl id='HARD_DISK' tag='SPAN' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - 하드디스크 클릭" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="130f8f21-4c46-4530-b184-780a3b194c39" InformativeScreenshot="62c5e6ee9546ecded0a2f6dbc30cdb67" Selector="&lt;webctrl id='HARD_DISK' tag='SPAN' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - password창 찾기" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
               <ui:WaitUiElementAppear.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="33531e35-99e0-46c5-857a-21874fdeb3b5" InformativeScreenshot="41379c22c4a74b749bb85025fccbe4ed" Selector="&lt;html title='로그인 | 신한은행 개인뱅킹' /&gt;&#xA;&lt;webctrl parentid='INI_modal_logo' tag='IMG' /&gt;&#xA;&lt;nav up='3' /&gt;&#xA;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='initech_certificate_wrap' tag='DIV' idx='2' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
@@ -212,7 +266,7 @@
                 </ui:Target>
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
-            <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Secure Text - password창에 비밀번호 입력" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[password]">
+            <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Secure Text - password창에 비밀번호 입력" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[password]">
               <ui:TypeSecureText.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd044225-0da7-4f82-a2ea-d8062eac9a0e" InformativeScreenshot="3437e5a4a992cdf88cd4ad7e9711e4c7" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='로그인 | 신한은행 개인뱅킹 - Internet Explorer' /&gt;&lt;uia automationid='INI_Password_area' role='LIST' /&gt;&lt;uia automationid='INI_userPw' name='password' role='편집' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -224,9 +278,9 @@
                 </ui:Target>
               </ui:TypeSecureText.Target>
             </ui:TypeSecureText>
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - 확인버튼 확인하기" FoundElement="[findCheck]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5">
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - 확인버튼 확인하기" FoundElement="[findCheck]" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5">
               <ui:WaitUiElementAppear.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f61d3a1c-6db0-414a-b5c3-8917cf826344" InformativeScreenshot="5e4fe3b813ff3e52cbfcd5eabed2f725" Selector="&lt;html title='로그인 | 신한은행 개인뱅킹' /&gt;&#xD;&#xA;&lt;webctrl id='INI_certSubmit' tag='BUTTON' /&gt;&#xD;&#xA;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f61d3a1c-6db0-414a-b5c3-8917cf826344" InformativeScreenshot="5e4fe3b813ff3e52cbfcd5eabed2f725" Selector="&lt;html title='로그인 | 신한은행 개인뱅킹' /&gt;&#xA;&lt;webctrl id='INI_certSubmit' tag='BUTTON' /&gt;&#xA;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -236,7 +290,7 @@
                 </ui:Target>
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - 확인버튼 클릭" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click - 확인버튼 클릭" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -258,7 +312,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:LogMessage DisplayName="Log Message - LoginBank 마치고 나감" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;LoginBank out&quot;]" />
+            <ui:LogMessage DisplayName="Log Message - LoginBank 마치고 나감" sap:VirtualizedContainerService.HintSize="433.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;LoginBank out&quot;]" />
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
